@@ -49,11 +49,19 @@ int StudentsList::listSize() {
 }
 
 void StudentsList::insertStudent() {
-    Student *r = head->next;
+    Student *r = head;
     string num, name;
     int age, score;
     cout << "请输入学生学号:";
     cin >> num;
+    while (r->next) {
+        r = r->next;
+        if (r->num == num) {
+            cout << "错误:学号已存在" << endl;
+            return;
+        }
+
+    }
     cout << "\n请输入学生姓名:";
     cin >> name;
     cout << "\n请输入学生年龄:";
@@ -65,25 +73,19 @@ void StudentsList::insertStudent() {
             cout << "学生成绩不能为负数，请重新输入:";
         }
     } while (score < 0);
-    while (r) {
-        if (r->num == num) {
-            cout << "错误:学号已存在" << endl;
-            return;
-        }
-        r = r->next;
-    }
+
     Student *nStu = new Student;
     nStu->num = num;
     nStu->name = name;
     nStu->age = age;
     nStu->score = score;
     nStu->next = NULL;
-    r = nStu;
+    r->next = nStu;
     length++;
 }
 
 void StudentsList::delStudent() {
-    cout << "请输入要删除的学生学号:";
+    cout << "\n请输入要删除的学生学号:";
     string num;
     cin >> num;
     Student *r = head->next;
@@ -97,6 +99,7 @@ void StudentsList::delStudent() {
         r = r->next;
         p = p->next;
     }
+    cout << "\n指定的学号不存在" << endl;
 }
 
 void StudentsList::findStudent() {
@@ -106,64 +109,65 @@ void StudentsList::findStudent() {
     Student *r = head->next;
     while (r) {
         if (r->num == num) {
+            cout << "\n--------学生信息--------" << endl;
             cout << "学生学号:" << r->num << endl;
             cout << "学生姓名:" << r->name << endl;
             cout << "学生年龄:" << r->age << endl;
             cout << "学生成绩:" << r->score << endl;
+            cout << "--------打印完毕--------" << endl;
             return;
         }
+        r = r->next;
     }
-    cout << "未找到该学生" << endl;
+    cout << "\n未找到该学生" << endl;
 }
 
 void StudentsList::display() {
     Student *r = head->next;
+    cout << "\n--------学生信息--------" << endl;
     while (r) {
         cout << "学生学号:" << r->num << endl;
         cout << "学生姓名:" << r->name << endl;
         cout << "学生年龄:" << r->age << endl;
         cout << "学生成绩:" << r->score << endl << endl;
+        r = r->next;
     }
     cout << "--------打印完毕--------" << endl;
 }
 
 void StudentsList::sortPrint() {
     set<string> set1;
-    cout << "是否对学生信息按学生成绩排列并输出(Y/N):";
-    char t;
-    cin >> t;
-    t = toupper(t);
-    if (t == 'Y') {
-        for (int i = 0; i < length; ++i) {
-            Student *r = head->next;
-            string maxNum, maxName;
-            int maxAge = 0, flag = 0;
-            double maxScore = -1;
-            while (r) {
-                if (set1.count(r->num)) {
-                    continue;
-                }
-                if (r->score > maxScore) {
-                    maxNum = r->num;
-                    maxName = r->name;
-                    maxAge = r->age;
-                    maxScore = r->score;
-                    flag = 1;
-                    break;
-                }
-                r = r->next;
+    for (int i = 0; i < length; ++i) {
+        Student *r = head;
+        string maxNum, maxName;
+        int maxAge = 0, flag = 0;
+        double maxScore = -1;
+        while (r->next) {
+            r = r->next;
+            if (set1.count(r->num)) {
+                continue;
             }
-            if (!flag) {
-                cout << "学生列表为空" << endl;
-                return;
+            if (r->score > maxScore) {
+                maxNum = r->num;
+                maxName = r->name;
+                maxAge = r->age;
+                maxScore = r->score;
+                flag = 1;
+                continue;
             }
-            cout << "学生学号:" << maxNum << endl;
-            cout << "学生姓名:" << maxName << endl;
-            cout << "学生年龄:" << maxAge << endl;
-            cout << "学生成绩:" << maxScore << endl << endl;
-            set1.insert(r->num);
         }
+        if (!flag) {
+            cout << "学生列表为空" << endl;
+            return;
+        }
+        cout << "\n--------学生信息--------" << endl;
+        cout << "学生学号:" << maxNum << endl;
+        cout << "学生姓名:" << maxName << endl;
+        cout << "学生年龄:" << maxAge << endl;
+        cout << "学生成绩:" << maxScore << endl << endl;
+        set1.insert(maxNum);
     }
+    cout << "--------打印完毕--------" << endl;
 }
 
 void StudentsList::countE() {
@@ -173,10 +177,10 @@ void StudentsList::countE() {
         if (r->score < 60) {
             num++;
         }
+        r = r->next;
     }
     cout << "不及格的有" << num << "人" << endl;
 }
-
 
 
 void printPanel() {
@@ -196,7 +200,7 @@ int main() {
     StudentsList sList;
     int first = 0;
     while (true) {
-        if (first){
+        if (first) {
             system("pause");
             system("cls");
         }
@@ -234,6 +238,7 @@ int main() {
             }
             case 7: {
                 sList.countE();
+                continue;
             }
             case 8: {
                 goto exit;

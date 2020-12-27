@@ -8,82 +8,82 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/CPP/SchoolTask/Task1/cmake-build-debug"/>
+				<Option working_dir="D:/Code/CppProject/school-task/Task1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Task1">
-				<Option output="E:/CPP/SchoolTask/Task1/cmake-build-debug/Task1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CPP/SchoolTask/Task1/cmake-build-debug"/>
+				<Option output="D:/Code/CppProject/school-task/Task1/cmake-build-debug/Task1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Code/CppProject/school-task/Task1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task1"/>
-					<CompileFile command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task1"/>
+					<CompileFile command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Task1/fast">
-				<Option output="E:/CPP/SchoolTask/Task1/cmake-build-debug/Task1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CPP/SchoolTask/Task1/cmake-build-debug"/>
+				<Option output="D:/Code/CppProject/school-task/Task1/cmake-build-debug/Task1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Code/CppProject/school-task/Task1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Users/YeEeck/Tools/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Users/yeche/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task1/fast"/>
-					<CompileFile command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task1/fast"/>
+					<CompileFile command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/CPP/SchoolTask/Task1/cmake-build-debug"/>
+				<Option working_dir="D:/Code/CppProject/school-task/Task1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/CPP/SchoolTask/Task1/cmake-build-debug"/>
+				<Option working_dir="D:/Code/CppProject/school-task/Task1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/YeEeck/Tools/mingw64/bin/mingw32-make.exe -f &quot;E:/CPP/SchoolTask/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/yeche/mingw64/bin/mingw32-make.exe -f &quot;D:/Code/CppProject/school-task/Task1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/CPP/SchoolTask/Task1/main.cpp">
+		<Unit filename="D:/Code/CppProject/school-task/Task1/main.cpp">
 			<Option target="Task1"/>
 		</Unit>
-		<Unit filename="E:/CPP/SchoolTask/Task1/CMakeLists.txt">
+		<Unit filename="D:/Code/CppProject/school-task/Task1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
