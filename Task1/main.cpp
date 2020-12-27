@@ -65,10 +65,32 @@ void StudentsList::insertStudent() {
     cout << "\n请输入学生姓名:";
     cin >> name;
     cout << "\n请输入学生年龄:";
-    cin >> age;
+    while (true) {
+        cin >> age;
+        if (cin.fail()) {
+            cin.clear();
+            string str;
+            cin >> str;
+            cout << "输入的 " << str << " 不是一个有效的年龄" << endl;
+            cout << "请重新输入:";
+        } else {
+            break;
+        }
+    }
     cout << "\n请输入学生成绩:";
     do {
-        cin >> score;
+        while (true) {
+            cin >> score;
+            if (cin.fail()) {
+                cin.clear();
+                string str;
+                cin >> str;
+                cout << "输入的 " << str << " 不是一个有效的年龄" << endl;
+                cout << "请重新输入:";
+            } else {
+                break;
+            }
+        }
         if (score < 0) {
             cout << "学生成绩不能为负数，请重新输入:";
         }
@@ -208,7 +230,18 @@ int main() {
         printPanel();
         int num;
         cout << endl << "请输入要执行的选项序号:";
-        cin >> num;
+        while (true) {
+            cin >> num;
+            if (cin.fail()) {
+                cin.clear();
+                string str;
+                cin >> str;
+                cout << "输入的 " << str << " 不是一个有效的选项" << endl;
+                cout << "请重新输入:";
+            } else {
+                break;
+            }
+        }
         switch (num) {
             case 1: {
                 sList.insertStudent();
@@ -229,7 +262,7 @@ int main() {
                 continue;
             }
             case 5: {
-                cout << "系统内存在 " << sList.listSize() << " 个学生";
+                cout << "系统内存在 " << sList.listSize() << " 个学生" << endl;
                 continue;
             }
             case 6: {
