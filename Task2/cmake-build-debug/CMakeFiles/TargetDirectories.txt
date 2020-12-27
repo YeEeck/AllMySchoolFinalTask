@@ -1,3 +1,3 @@
-D:/Code/CppProject/school-task/Task2/cmake-build-debug/CMakeFiles/Task2.dir
-D:/Code/CppProject/school-task/Task2/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Code/CppProject/school-task/Task2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/CPP/SchoolTask/Task2/cmake-build-debug/CMakeFiles/Task2.dir
+E:/CPP/SchoolTask/Task2/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/CPP/SchoolTask/Task2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
