@@ -137,6 +137,7 @@ public:
                     maxList[i] = list[i];
                 }
                 weight = r->weight;
+                res[0] += weight;
             }
             r = r->nextEdge;
         }
@@ -148,7 +149,7 @@ public:
             res[2 + i] = maxList[2 + i];
         }
         res[2 + maxList[1]] = from;
-        res[0] += weight;
+
         return res;
     }
 
@@ -161,11 +162,13 @@ public:
     string getData(int index) {
         return mVexs[index].data;
     }
+
+
 };
 
 int main() {
     ALGraph alGraph(100);
-    for (int i = 1; i <= 7; ++i) {
+    for (int i = 1; i <= 11; ++i) {
         alGraph.addDot(std::to_string(i));
     }
     alGraph.addEdge("1", "2", 2);
@@ -175,6 +178,13 @@ int main() {
     alGraph.addEdge("5", "3", 2);
     alGraph.addEdge("5", "4", 1);
     alGraph.addEdge("4", "7", 2);
+    alGraph.addEdge("6", "10", 10);
+    alGraph.addEdge("7", "8", 3);
+    alGraph.addEdge("8", "10", 4);
+    alGraph.addEdge("8", "9", 4);
+    alGraph.addEdge("9", "11", 3);
+    alGraph.addEdge("11", "4", 5);
+    alGraph.addEdge("9", "3", 4);
 
     int *list = alGraph.dfs(alGraph.getPos("1"), alGraph.getPos("7"));
     if (list == NULL) {
