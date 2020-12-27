@@ -7,6 +7,41 @@
 
 using namespace std;
 
+//整数输入纠错函数
+int safeInputInt(){
+    int data;
+    while (true) {
+        cin >> data;
+        if (cin.fail()) {
+            cin.clear();
+            string str;
+            cin >> str;
+            cout << "输入的 " << str << " 不是一个有效的输入" << endl;
+            cout << "请重新输入:";
+        } else {
+            break;
+        }
+    }
+    return data;
+}
+
+double safeInputDou(){
+    double data;
+    while (true) {
+        cin >> data;
+        if (cin.fail()) {
+            cin.clear();
+            string str;
+            cin >> str;
+            cout << "输入的 " << str << " 不是一个有效的输入" << endl;
+            cout << "请重新输入:";
+        } else {
+            break;
+        }
+    }
+    return data;
+}
+
 typedef struct Student {
     string num;//学号
     string name;//姓名
@@ -51,7 +86,8 @@ int StudentsList::listSize() {
 void StudentsList::insertStudent() {
     Student *r = head;
     string num, name;
-    int age, score;
+    int age;
+    double score;
     cout << "请输入学生学号:";
     cin >> num;
     while (r->next) {
@@ -65,32 +101,10 @@ void StudentsList::insertStudent() {
     cout << "\n请输入学生姓名:";
     cin >> name;
     cout << "\n请输入学生年龄:";
-    while (true) {
-        cin >> age;
-        if (cin.fail()) {
-            cin.clear();
-            string str;
-            cin >> str;
-            cout << "输入的 " << str << " 不是一个有效的年龄" << endl;
-            cout << "请重新输入:";
-        } else {
-            break;
-        }
-    }
+    age = safeInputInt();
     cout << "\n请输入学生成绩:";
     do {
-        while (true) {
-            cin >> score;
-            if (cin.fail()) {
-                cin.clear();
-                string str;
-                cin >> str;
-                cout << "输入的 " << str << " 不是一个有效的年龄" << endl;
-                cout << "请重新输入:";
-            } else {
-                break;
-            }
-        }
+        score = safeInputDou();
         if (score < 0) {
             cout << "学生成绩不能为负数，请重新输入:";
         }
@@ -230,18 +244,7 @@ int main() {
         printPanel();
         int num;
         cout << endl << "请输入要执行的选项序号:";
-        while (true) {
-            cin >> num;
-            if (cin.fail()) {
-                cin.clear();
-                string str;
-                cin >> str;
-                cout << "输入的 " << str << " 不是一个有效的选项" << endl;
-                cout << "请重新输入:";
-            } else {
-                break;
-            }
-        }
+        num = safeInputInt();
         switch (num) {
             case 1: {
                 sList.insertStudent();
