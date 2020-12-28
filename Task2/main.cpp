@@ -106,7 +106,7 @@ public:
         }
         return -1;
     }
-
+    int dp[100][100];
     int *dfsb(int from, int to) {
         int weight = 0;
         int *res = new int[length]{0};
@@ -116,7 +116,7 @@ public:
             return res;
         }
         if (vis[from]) {
-            return NULL;
+            return dp[from];
         }
         vis[from] = 1;
 
@@ -126,7 +126,7 @@ public:
         int maxList[100] = {0};
         while (r) {
             list = dfsb(r->ivex, to);
-            if (list == NULL) {
+            if (list == NULL || list[1] == -1) {
                 r = r->nextEdge;
                 continue;
             }
@@ -149,12 +149,15 @@ public:
             res[2 + i] = maxList[2 + i];
         }
         res[2 + maxList[1]] = from;
-
+        for (int i = 0; i < res[1] + 2; ++i) {
+            dp[from][i] = res[i];
+        }
         return res;
     }
 
     int *dfs(int from, int to) {
         memset(vis, 0, 1000);
+        memset(dp, -1, 10000);
         int *res = dfsb(from, to);
         return res;
     }
