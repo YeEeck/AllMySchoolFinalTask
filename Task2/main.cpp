@@ -3,6 +3,7 @@
 
 using namespace std;
 
+#define INF (~(0x1<<31))
 
 int safeInputInt() {
     int data;
@@ -106,7 +107,9 @@ public:
         }
         return -1;
     }
+
     int dp[100][100];
+
     int *dfsb(int from, int to) {
         int weight = 0;
         int *res = new int[length]{0};
@@ -166,37 +169,66 @@ public:
         return mVexs[index].data;
     }
 
-
+    void display() {
+        for (int i = 0; i < length; ++i) {
+            cout << i+1 << "." << mVexs[i].data << endl;
+        }
+    }
 };
+
 
 int main() {
     ALGraph alGraph(100);
-    for (int i = 1; i <= 11; ++i) {
-        alGraph.addDot(std::to_string(i));
-    }
-    alGraph.addEdge("1", "2", 2);
-    alGraph.addEdge("2", "6", 5);
-    alGraph.addEdge("6", "7", 7);
-    alGraph.addEdge("2", "5", 1);
-    alGraph.addEdge("5", "3", 2);
-    alGraph.addEdge("5", "4", 1);
-    alGraph.addEdge("4", "7", 2);
-    alGraph.addEdge("6", "10", 10);
-    alGraph.addEdge("7", "8", 3);
-    alGraph.addEdge("8", "10", 4);
-    alGraph.addEdge("8", "9", 4);
-    alGraph.addEdge("9", "11", 3);
-    alGraph.addEdge("11", "4", 5);
-    alGraph.addEdge("9", "3", 4);
+    alGraph.addDot("大门");
+    alGraph.addDot("图书馆");
+    alGraph.addDot("实验楼D");
+    alGraph.addDot("实验楼C");
+    alGraph.addDot("实验楼B");
+    alGraph.addDot("实验楼A");
+    alGraph.addDot("教学楼A");
+    alGraph.addDot("教学楼B");
+    alGraph.addDot("教学楼C");
+    alGraph.addDot("操场");
+    alGraph.addDot("宿舍楼D");
+    alGraph.addDot("宿舍楼C");
+    alGraph.addDot("三食堂");
+    alGraph.addDot("超市");
+    alGraph.addDot("一食堂");
+    alGraph.addDot("体育馆");
+    alGraph.display();
+    alGraph.addEdge("大门", "图书馆", 100);
+    alGraph.addEdge("大门", "实验楼D", 30);
+    alGraph.addEdge("实验楼D", "实验楼C", 20);
+    alGraph.addEdge("实验楼C", "实验楼B", 20);
+    alGraph.addEdge("实验楼B", "实验楼A", 20);
+    alGraph.addEdge("实验楼A", "图书馆", 20);
+    alGraph.addEdge("大门", "教学楼A", 10);
+    alGraph.addEdge("教学楼A", "教学楼B", 20);
+    alGraph.addEdge("教学楼B", "教学楼C", 20);
+    alGraph.addEdge("教学楼C", "图书馆", 20);
+    alGraph.addEdge("图书馆", "操场", 50);
+    alGraph.addEdge("操场", "超市", 10);
+    alGraph.addEdge("图书馆", "宿舍楼D", 50);
+    alGraph.addEdge("宿舍楼D", "宿舍楼C", 50);
+    alGraph.addEdge("宿舍楼C", "三食堂", 20);
+    alGraph.addEdge("宿舍楼C", "超市", 10);
+    alGraph.addEdge("超市", "三食堂", 10);
+    alGraph.addEdge("三食堂", "一食堂", 100);
+    alGraph.addEdge("体育馆", "教学楼C", 100);
+    alGraph.addEdge("体育馆", "一食堂", 10);
 
-    int *list = alGraph.dfs(alGraph.getPos("1"), alGraph.getPos("7"));
+    cout << "\n请输入你的位置:";
+    int pos = safeInputInt();
+    cout << "\n请输入你要到达的位置:";
+    int dist1 = safeInputInt();
+    int *list = alGraph.dfs(pos - 1, dist1 - 1);
     if (list == NULL) {
         cout << "没有合适的路线" << endl;
     } else {
         cout << "找到线路，总长为 " << list[0] << " ，需经过 " << list[1] << " 个站点" << endl;
         for (int i = list[1] + 1; i >= 2; --i) {
-            if (i == 2){
-                cout << alGraph.getData(list[i]) << "->" << "7";
+            if (i == 2) {
+                cout << alGraph.getData(list[i]) << "->" << alGraph.getData(dist1-1);
                 break;
             }
             cout << alGraph.getData(list[i]) << "->";
@@ -204,5 +236,6 @@ int main() {
         }
         cout << endl;
     }
+    getchar();getchar();
     return 0;
 }
