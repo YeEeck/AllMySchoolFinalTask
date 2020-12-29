@@ -167,6 +167,7 @@ public:
     }
 
     string getData(int index) {
+        if (index >= length) return "none";
         return mVexs[index].data;
     }
 
@@ -257,6 +258,52 @@ void del(const string &str) {
     remove("temp.txt");
 }
 
+void add(ALGraph *alGraph) {
+    ifstream file("data.txt", ios::in);
+    ofstream tempF("temp.txt", ios::out);
+    string name;
+    while (true) {
+        cout << "请输入要添加的导航点的名称:";
+        cin >> name;
+        if (alGraph->getPos(name) == -1) {
+            break;
+        } else {
+            cout << "\n已有同名点存在，请重新输入" << endl;
+        }
+    }
+    tempF << "A " << name;
+    tempF << endl;
+    string temp;
+    while (getline(file, temp)) {
+        tempF << temp;
+        tempF << endl;
+    }
+    while (true) {
+        cout << "\n请输入要连接到这个导航点的导航点的序号(输入-1结束):";
+        int num = safeInputInt();
+        if (num == -1) {
+            break;
+        }
+        cout << "\n请输入要连接到这个导航点的导航点与这个导航点的权值:";
+        int weight = safeInputInt();
+        if (alGraph->getData(num - 1) != "none") {
+            tempF << "B " << name << " " << alGraph->getData(num - 1) << " " << weight;
+            tempF << endl;
+        }
+    }
+    file.close();
+    tempF.close();
+    remove("data.txt");
+    ofstream file2("data.txt");
+    ifstream tempF2("temp.txt");
+    while (getline(tempF2, temp)) {
+        file2 << temp;
+        file2 << endl;
+    }
+    file2.close();
+    tempF2.close();
+    remove("temp.txt");
+}
 
 int main() {
     first:;
@@ -329,7 +376,7 @@ int main() {
         cout << "B.删除指定导航点" << endl;
         cout << "C.添加某一导航点" << endl;
         cout << "D.结束程序" << endl;
-        cout << "------------------------------" << endl;
+        cout << "------------------------------------" << endl;
         char t;
         while (true) {
             string str;
@@ -356,8 +403,9 @@ int main() {
                 cout << "请输入要删除的导航点序号:";
                 int pos = safeInputInt() - 1;
                 string delStr = alGraph.getData(pos);
-                if (pos <= 0 || pos > alGraph.getLength()) {
+                if (pos < 0 || pos > alGraph.getLength()) {
                     cout << "输入的序号有误" << endl;
+                    system("pause");
                     system("cls");
                     break;
                 } else {
@@ -368,11 +416,19 @@ int main() {
                 }
             }
 
+            case 'C': {
+                add(&alGraph);
+                system("pause");
+                system("cls");
+                goto first;
+            }
+
             case 'D': {
                 exit(0);
             }
             default: {
                 cout << "错误的输入选项，请重新输入" << endl;
+                system("pause");
             }
         }
     }
