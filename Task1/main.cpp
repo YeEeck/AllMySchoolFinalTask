@@ -25,6 +25,7 @@ int safeInputInt(){
     return data;
 }
 
+//浮点数输入纠错函数
 double safeInputDou(){
     double data;
     while (true) {
@@ -42,6 +43,7 @@ double safeInputDou(){
     return data;
 }
 
+//表示单个学生的结构体
 typedef struct Student {
     string num;//学号
     string name;//姓名
@@ -50,39 +52,44 @@ typedef struct Student {
     Student *next;
 } Student;
 
+
+//学生信息表类
 class StudentsList {
 private:
     Student *head;
     int length;
 
 public:
-    StudentsList();
+    StudentsList();//构造函数，用于初始化学生信息表
 
-    int listSize();
+    int listSize();//获取表的长度
 
-    void insertStudent();
+    void insertStudent();//插入一个学生的信息
 
-    void delStudent();
+    void delStudent();//删除一个学生信息
 
-    void findStudent();
+    void findStudent();//根据学号查询并输出对应的学生信息
 
-    void display();
+    void display();//输出所有的学生信息
 
-    void sortPrint();
+    void sortPrint();//将所有学生信息排序并输出
 
-    void countE();
+    void countE();//统计所有不及格的人数并输出
 };
 
+//构造函数，用于初始化学生信息表
 StudentsList::StudentsList() {
     head = new Student;
     head->next = NULL;
     length = 0;
 }
 
+//获取表的长度
 int StudentsList::listSize() {
     return length;
 }
 
+//插入一个学生的信息
 void StudentsList::insertStudent() {
     Student *r = head;
     string num, name;
@@ -120,6 +127,7 @@ void StudentsList::insertStudent() {
     length++;
 }
 
+//删除一个学生信息
 void StudentsList::delStudent() {
     cout << "\n请输入要删除的学生学号:";
     string num;
@@ -138,6 +146,7 @@ void StudentsList::delStudent() {
     cout << "\n指定的学号不存在" << endl;
 }
 
+//根据学号查询并输出对应的学生信息
 void StudentsList::findStudent() {
     cout << "请输入要查找的学生学号:";
     string num;
@@ -158,6 +167,7 @@ void StudentsList::findStudent() {
     cout << "\n未找到该学生" << endl;
 }
 
+//输出所有的学生信息
 void StudentsList::display() {
     Student *r = head->next;
     cout << "\n--------学生信息--------" << endl;
@@ -171,6 +181,7 @@ void StudentsList::display() {
     cout << "--------打印完毕--------" << endl;
 }
 
+//将所有学生信息排序并输出
 void StudentsList::sortPrint() {
     set<string> set1;
     for (int i = 0; i < length; ++i) {
@@ -206,6 +217,7 @@ void StudentsList::sortPrint() {
     cout << "--------打印完毕--------" << endl;
 }
 
+//统计所有不及格的人数并输出
 void StudentsList::countE() {
     Student *r = head->next;
     int num = 0;
@@ -218,7 +230,7 @@ void StudentsList::countE() {
     cout << "不及格的有" << num << "人" << endl;
 }
 
-
+//输出菜单面板
 void printPanel() {
     cout << "----------学生信息管理系统----------" << endl;
     cout << "| 1.添加学生                       |" << endl;
