@@ -12,7 +12,9 @@ int safeInputInt(){
     int data;
     while (true) {
         cin >> data;
+        //检测到cin出现问题则要求重新输入
         if (cin.fail()) {
+            //cin.clear将缓冲区内数据清空
             cin.clear();
             string str;
             cin >> str;
@@ -22,6 +24,7 @@ int safeInputInt(){
             break;
         }
     }
+    //返回检测无误的数值
     return data;
 }
 
@@ -29,7 +32,9 @@ int safeInputInt(){
 double safeInputDou(){
     double data;
     while (true) {
+        //检测到cin出现问题则要求重新输入
         cin >> data;
+        //cin.clear将缓冲区内数据清空
         if (cin.fail()) {
             cin.clear();
             string str;
@@ -40,6 +45,7 @@ double safeInputDou(){
             break;
         }
     }
+    //返回检测无误的数值
     return data;
 }
 
@@ -86,7 +92,7 @@ StudentsList::StudentsList() {
 
 //获取表的长度
 int StudentsList::listSize() {
-    return length;
+    return length;//将表长度数值输出
 }
 
 //插入一个学生的信息
@@ -152,6 +158,7 @@ void StudentsList::findStudent() {
     string num;
     cin >> num;
     Student *r = head->next;
+    //遍历学生信息，碰到对应学号则输出
     while (r) {
         if (r->num == num) {
             cout << "\n--------学生信息--------" << endl;
@@ -171,6 +178,7 @@ void StudentsList::findStudent() {
 void StudentsList::display() {
     Student *r = head->next;
     cout << "\n--------学生信息--------" << endl;
+    //遍历所有学生信息并输出
     while (r) {
         cout << "学生学号:" << r->num << endl;
         cout << "学生姓名:" << r->name << endl;
@@ -183,17 +191,21 @@ void StudentsList::display() {
 
 //将所有学生信息排序并输出
 void StudentsList::sortPrint() {
+    //定义一个set用来检查一个学生信息是否已经被输出
     set<string> set1;
     for (int i = 0; i < length; ++i) {
         Student *r = head;
         string maxNum, maxName;
         int maxAge = 0, flag = 0;
         double maxScore = -1;
+        //遍历 选择排序
         while (r->next) {
             r = r->next;
+            //检测set内是否存在当前遍历到的值，如果遍历到就跳过直接下一个
             if (set1.count(r->num)) {
                 continue;
             }
+            //在本次循环内找到最大的值，然后塞进set，避免下一次碰到。
             if (r->score > maxScore) {
                 maxNum = r->num;
                 maxName = r->name;
@@ -203,6 +215,7 @@ void StudentsList::sortPrint() {
                 continue;
             }
         }
+        //flag用来判断排序是否被执行过来判断学生列表是否为空。其实直接获取length也行。
         if (!flag) {
             cout << "学生列表为空" << endl;
             return;
@@ -221,13 +234,15 @@ void StudentsList::sortPrint() {
 void StudentsList::countE() {
     Student *r = head->next;
     int num = 0;
+    //遍历
     while (r) {
+        //如果当前学生分数小于60则计数器+1
         if (r->score < 60) {
             num++;
         }
         r = r->next;
     }
-    cout << "不及格的有" << num << "人" << endl;
+    cout << "不及格的有" << num << "人" << endl;//输出
 }
 
 //输出菜单面板
