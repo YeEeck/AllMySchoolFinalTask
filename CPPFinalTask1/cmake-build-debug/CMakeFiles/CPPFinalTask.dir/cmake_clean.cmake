@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CPPFinalTask.dir/main.cpp.obj"
+  "CPPFinalTask.pdb"
   "CPPFinalTask.exe"
   "CPPFinalTask.exe.manifest"
-  "CPPFinalTask.pdb"
   "libCPPFinalTask.dll.a"
 )
 

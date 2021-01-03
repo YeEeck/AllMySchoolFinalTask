@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "C:/Users/yeche/mingw64/bin/g++.exe")
+set(CMAKE_CXX_COMPILER "C:/Users/YeEeck/Tools/mingw64/bin/g++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "8.1.0")
@@ -14,17 +14,15 @@ set(CMAKE_CXX20_COMPILE_FEATURES "cxx_std_20")
 
 set(CMAKE_CXX_PLATFORM_ID "MinGW")
 set(CMAKE_CXX_SIMULATE_ID "")
-set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/yeche/mingw64/bin/ar.exe")
-set(CMAKE_CXX_COMPILER_AR "C:/Users/yeche/mingw64/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "C:/Users/yeche/mingw64/bin/ranlib.exe")
-set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/yeche/mingw64/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/Users/yeche/mingw64/bin/ld.exe")
-set(CMAKE_MT "")
+set(CMAKE_AR "C:/Users/YeEeck/Tools/mingw64/bin/ar.exe")
+set(CMAKE_CXX_COMPILER_AR "C:/Users/YeEeck/Tools/mingw64/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Users/YeEeck/Tools/mingw64/bin/ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/YeEeck/Tools/mingw64/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Users/YeEeck/Tools/mingw64/bin/ld.exe")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
 set(CMAKE_CXX_COMPILER_WORKS TRUE)
@@ -73,7 +71,6 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/yeche/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++;C:/Users/yeche/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32;C:/Users/yeche/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward;C:/Users/yeche/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include;C:/Users/yeche/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed;C:/Users/yeche/mingw64/x86_64-w64-mingw32/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;mingw32;gcc_s;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "C:/Users/yeche/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0;C:/Users/yeche/mingw64/lib/gcc;C:/Users/yeche/mingw64/x86_64-w64-mingw32/lib;C:/Users/yeche/mingw64/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "C:/Users/YeEeck/Tools/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0;C:/Users/YeEeck/Tools/mingw64/lib/gcc;C:/Users/YeEeck/Tools/mingw64/lib;C:/Users/YeEeck/Tools/mingw64/x86_64-w64-mingw32/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

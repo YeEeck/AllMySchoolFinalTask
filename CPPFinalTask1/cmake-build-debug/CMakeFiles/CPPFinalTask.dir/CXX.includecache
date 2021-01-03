@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/Code/CppProject/school-task/CPPFinalTask1/main.cpp
+E:/CPP/SchoolTask/CPPFinalTask1/main.cpp
 iostream
 -
 random
@@ -16,5 +16,9 @@ ctime
 map
 -
 fstream
+-
+set
+-
+queue
 -
 
