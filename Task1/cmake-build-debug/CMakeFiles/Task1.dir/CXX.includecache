@@ -6,11 +6,9 @@
 
 #IncludeRegexTransform: 
 
-E:/CPP/SchoolTask/Task1/main.cpp
+D:/Code/CppProject/school-task/Task1/main.cpp
 iostream
 -
 set
--
-windows.h
 -
 

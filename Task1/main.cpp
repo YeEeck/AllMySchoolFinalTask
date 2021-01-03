@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <set>
-#include <windows.h>
 
 using namespace std;
 
